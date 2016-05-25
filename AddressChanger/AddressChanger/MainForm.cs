@@ -22,9 +22,19 @@ namespace AddressChanger
         private void applyButton_Click(object sender, EventArgs e)
         {
             string swgDir = Properties.Settings.Default.swgDirectory;
+            string newAddress = newAddressTextBox.Text;
+            bool multipleInstances = multipleInstancesCheckBox.Checked;
             if (Directory.Exists(swgDir))
             {
                 StreamWriter configWriter = new StreamWriter(swgDir + @"\user.cfg");
+                configWriter.Write("[SwgClient]\r\n");
+                configWriter.Write("allowMultipleInstances=" + multipleInstances + "\r\n\r\n");
+                configWriter.Write("[Station]\r\n");
+                configWriter.Write("subscriptionFeatures=1\r\n");
+                configWriter.Write("gameFeatures=65535\r\n\r\n");
+                configWriter.Write("[ClientGame]\r\n");
+                configWriter.Write("loginServerAddress=" + newAddress);
+                configWriter.Close();
             }
             else
                 MessageBox.Show("Please enter a valid SWG game directory.", "Invalid Directory");
@@ -51,6 +61,11 @@ namespace AddressChanger
         {
             if (Directory.Exists(Properties.Settings.Default.swgDirectory))
                 Process.Start(Properties.Settings.Default.swgDirectory);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            gameDirectoryTextBox.Text = Properties.Settings.Default.swgDirectory;
         }
     }
 }
