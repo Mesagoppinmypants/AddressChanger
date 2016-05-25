@@ -34,7 +34,7 @@
             this.gameDirectoryTextBox = new System.Windows.Forms.TextBox();
             this.gameDirectoryLabel = new System.Windows.Forms.Label();
             this.newAddressLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.newAddressTextBox = new System.Windows.Forms.TextBox();
             this.changeDirButton = new System.Windows.Forms.Button();
             this.openDirButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
@@ -59,6 +59,7 @@
             this.applyButton.TabIndex = 1;
             this.applyButton.Text = "Apply";
             this.applyButton.UseVisualStyleBackColor = true;
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // gameDirectoryTextBox
             // 
@@ -85,12 +86,12 @@
             this.newAddressLabel.TabIndex = 4;
             this.newAddressLabel.Text = "New Address";
             // 
-            // textBox1
+            // newAddressTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 5;
+            this.newAddressTextBox.Location = new System.Drawing.Point(12, 166);
+            this.newAddressTextBox.Name = "newAddressTextBox";
+            this.newAddressTextBox.Size = new System.Drawing.Size(154, 20);
+            this.newAddressTextBox.TabIndex = 5;
             // 
             // changeDirButton
             // 
@@ -100,6 +101,7 @@
             this.changeDirButton.TabIndex = 6;
             this.changeDirButton.Text = "Change";
             this.changeDirButton.UseVisualStyleBackColor = true;
+            this.changeDirButton.Click += new System.EventHandler(this.changeDirButton_Click);
             // 
             // openDirButton
             // 
@@ -109,6 +111,7 @@
             this.openDirButton.TabIndex = 7;
             this.openDirButton.Text = "Open";
             this.openDirButton.UseVisualStyleBackColor = true;
+            this.openDirButton.Click += new System.EventHandler(this.openDirButton_Click);
             // 
             // closeButton
             // 
@@ -127,7 +130,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.openDirButton);
             this.Controls.Add(this.changeDirButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.newAddressTextBox);
             this.Controls.Add(this.newAddressLabel);
             this.Controls.Add(this.gameDirectoryLabel);
             this.Controls.Add(this.gameDirectoryTextBox);
@@ -152,7 +155,7 @@
         private System.Windows.Forms.TextBox gameDirectoryTextBox;
         private System.Windows.Forms.Label gameDirectoryLabel;
         private System.Windows.Forms.Label newAddressLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox newAddressTextBox;
         private System.Windows.Forms.Button changeDirButton;
         private System.Windows.Forms.Button openDirButton;
         private System.Windows.Forms.Button closeButton;
