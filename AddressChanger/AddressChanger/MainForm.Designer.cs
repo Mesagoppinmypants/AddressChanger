@@ -110,6 +110,7 @@
             // 
             this.currentAddressTextBox.Location = new System.Drawing.Point(12, 85);
             this.currentAddressTextBox.Name = "currentAddressTextBox";
+            this.currentAddressTextBox.ReadOnly = true;
             this.currentAddressTextBox.Size = new System.Drawing.Size(154, 20);
             this.currentAddressTextBox.TabIndex = 13;
             // 
