@@ -40,7 +40,23 @@ namespace AddressChanger
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            getCurrentAddress();
+            if (!Directory.Exists(Properties.Settings.Default.swgDirectory))
+            {
+                string dialog = null;
+                if (Properties.Settings.Default.swgDirectory == "")
+                    dialog = "You have not configured your SWG directory, would you like to do that now?";
+                else
+                    dialog = "The SWG directory that you had saved is no longer valid, would you like to change it now?";
+
+                DialogResult dialogResult = MessageBox.Show(dialog, "Configure SWG Directory?", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Extras extrasForm = new Extras();
+                    extrasForm.ShowDialog();
+                }
+            }
+            else
+                getCurrentAddress();
         }
 
         private void getCurrentAddress()
