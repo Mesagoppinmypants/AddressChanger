@@ -33,6 +33,7 @@
             this.changeDirButton = new System.Windows.Forms.Button();
             this.gameDirectoryLabel = new System.Windows.Forms.Label();
             this.gameDirectoryTextBox = new System.Windows.Forms.TextBox();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openDirButton
@@ -72,11 +73,22 @@
             this.gameDirectoryTextBox.Size = new System.Drawing.Size(257, 20);
             this.gameDirectoryTextBox.TabIndex = 8;
             // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(105, 226);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 12;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // Extras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.openDirButton);
             this.Controls.Add(this.changeDirButton);
             this.Controls.Add(this.gameDirectoryLabel);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.Button changeDirButton;
         private System.Windows.Forms.Label gameDirectoryLabel;
         private System.Windows.Forms.TextBox gameDirectoryTextBox;
+        private System.Windows.Forms.Button closeButton;
     }
 }

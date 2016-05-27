@@ -57,5 +57,11 @@ namespace AddressChanger
                 userConfig.Close();
             }
         }
+
+        private void gameDirectoryButton_Click(object sender, EventArgs e)
+        {
+            Extras extras = new Extras();
+            extras.ShowDialog();
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.newAddressTextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.multipleInstancesCheckBox = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gameDirectoryButton = new System.Windows.Forms.Button();
             this.currentAddressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -97,14 +97,15 @@
             this.multipleInstancesCheckBox.Text = "Multiple Instances";
             this.multipleInstancesCheckBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // gameDirectoryButton
             // 
-            this.button1.Location = new System.Drawing.Point(299, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Game Directory";
-            this.button1.UseVisualStyleBackColor = true;
+            this.gameDirectoryButton.Location = new System.Drawing.Point(172, 85);
+            this.gameDirectoryButton.Name = "gameDirectoryButton";
+            this.gameDirectoryButton.Size = new System.Drawing.Size(75, 35);
+            this.gameDirectoryButton.TabIndex = 11;
+            this.gameDirectoryButton.Text = "Game Directory";
+            this.gameDirectoryButton.UseVisualStyleBackColor = true;
+            this.gameDirectoryButton.Click += new System.EventHandler(this.gameDirectoryButton_Click);
             // 
             // currentAddressTextBox
             // 
@@ -130,7 +131,7 @@
             this.ClientSize = new System.Drawing.Size(386, 261);
             this.Controls.Add(this.currentAddressTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.gameDirectoryButton);
             this.Controls.Add(this.multipleInstancesCheckBox);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.newAddressTextBox);
@@ -158,7 +159,7 @@
         private System.Windows.Forms.TextBox newAddressTextBox;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.CheckBox multipleInstancesCheckBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button gameDirectoryButton;
         private System.Windows.Forms.TextBox currentAddressTextBox;
         private System.Windows.Forms.Label label1;
     }

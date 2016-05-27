@@ -46,5 +46,10 @@ namespace AddressChanger
         {
             gameDirectoryTextBox.Text = Properties.Settings.Default.swgDirectory;
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }
