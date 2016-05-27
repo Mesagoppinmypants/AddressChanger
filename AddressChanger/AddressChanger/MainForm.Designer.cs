@@ -44,7 +44,7 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(74, 9);
+            this.titleLabel.Location = new System.Drawing.Point(48, 9);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(238, 40);
             this.titleLabel.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             // applyButton
             // 
-            this.applyButton.Location = new System.Drawing.Point(12, 159);
+            this.applyButton.Location = new System.Drawing.Point(33, 159);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(75, 23);
             this.applyButton.TabIndex = 1;
@@ -64,7 +64,7 @@
             // newAddressLabel
             // 
             this.newAddressLabel.AutoSize = true;
-            this.newAddressLabel.Location = new System.Drawing.Point(9, 117);
+            this.newAddressLabel.Location = new System.Drawing.Point(30, 117);
             this.newAddressLabel.Name = "newAddressLabel";
             this.newAddressLabel.Size = new System.Drawing.Size(70, 13);
             this.newAddressLabel.TabIndex = 4;
@@ -72,14 +72,14 @@
             // 
             // newAddressTextBox
             // 
-            this.newAddressTextBox.Location = new System.Drawing.Point(12, 133);
+            this.newAddressTextBox.Location = new System.Drawing.Point(33, 133);
             this.newAddressTextBox.Name = "newAddressTextBox";
             this.newAddressTextBox.Size = new System.Drawing.Size(154, 20);
             this.newAddressTextBox.TabIndex = 5;
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(156, 226);
+            this.closeButton.Location = new System.Drawing.Point(130, 226);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 8;
@@ -90,7 +90,7 @@
             // multipleInstancesCheckBox
             // 
             this.multipleInstancesCheckBox.AutoSize = true;
-            this.multipleInstancesCheckBox.Location = new System.Drawing.Point(172, 133);
+            this.multipleInstancesCheckBox.Location = new System.Drawing.Point(193, 133);
             this.multipleInstancesCheckBox.Name = "multipleInstancesCheckBox";
             this.multipleInstancesCheckBox.Size = new System.Drawing.Size(111, 17);
             this.multipleInstancesCheckBox.TabIndex = 10;
@@ -99,7 +99,7 @@
             // 
             // gameDirectoryButton
             // 
-            this.gameDirectoryButton.Location = new System.Drawing.Point(172, 85);
+            this.gameDirectoryButton.Location = new System.Drawing.Point(193, 85);
             this.gameDirectoryButton.Name = "gameDirectoryButton";
             this.gameDirectoryButton.Size = new System.Drawing.Size(75, 35);
             this.gameDirectoryButton.TabIndex = 11;
@@ -109,7 +109,7 @@
             // 
             // currentAddressTextBox
             // 
-            this.currentAddressTextBox.Location = new System.Drawing.Point(12, 85);
+            this.currentAddressTextBox.Location = new System.Drawing.Point(33, 85);
             this.currentAddressTextBox.Name = "currentAddressTextBox";
             this.currentAddressTextBox.ReadOnly = true;
             this.currentAddressTextBox.Size = new System.Drawing.Size(154, 20);
@@ -118,7 +118,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 69);
+            this.label1.Location = new System.Drawing.Point(30, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 12;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 261);
+            this.ClientSize = new System.Drawing.Size(335, 261);
             this.Controls.Add(this.currentAddressTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gameDirectoryButton);
