@@ -63,5 +63,10 @@ namespace AddressChanger
             Extras extras = new Extras();
             extras.ShowDialog();
         }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            getCurrentAddress();
+        }
     }
 }

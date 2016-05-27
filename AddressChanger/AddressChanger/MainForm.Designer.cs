@@ -146,6 +146,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[SWG NGE] Address Changer";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 
