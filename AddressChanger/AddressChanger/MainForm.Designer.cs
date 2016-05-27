@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.titleLabel = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
-            this.gameDirectoryTextBox = new System.Windows.Forms.TextBox();
-            this.gameDirectoryLabel = new System.Windows.Forms.Label();
             this.newAddressLabel = new System.Windows.Forms.Label();
             this.newAddressTextBox = new System.Windows.Forms.TextBox();
-            this.changeDirButton = new System.Windows.Forms.Button();
-            this.openDirButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.multipleInstancesCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.currentAddressTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -54,7 +53,7 @@
             // 
             // applyButton
             // 
-            this.applyButton.Location = new System.Drawing.Point(12, 192);
+            this.applyButton.Location = new System.Drawing.Point(12, 159);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(75, 23);
             this.applyButton.TabIndex = 1;
@@ -62,27 +61,10 @@
             this.applyButton.UseVisualStyleBackColor = true;
             this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
-            // gameDirectoryTextBox
-            // 
-            this.gameDirectoryTextBox.Location = new System.Drawing.Point(12, 81);
-            this.gameDirectoryTextBox.Name = "gameDirectoryTextBox";
-            this.gameDirectoryTextBox.ReadOnly = true;
-            this.gameDirectoryTextBox.Size = new System.Drawing.Size(362, 20);
-            this.gameDirectoryTextBox.TabIndex = 2;
-            // 
-            // gameDirectoryLabel
-            // 
-            this.gameDirectoryLabel.AutoSize = true;
-            this.gameDirectoryLabel.Location = new System.Drawing.Point(9, 65);
-            this.gameDirectoryLabel.Name = "gameDirectoryLabel";
-            this.gameDirectoryLabel.Size = new System.Drawing.Size(109, 13);
-            this.gameDirectoryLabel.TabIndex = 3;
-            this.gameDirectoryLabel.Text = "SWG Game Directory";
-            // 
             // newAddressLabel
             // 
             this.newAddressLabel.AutoSize = true;
-            this.newAddressLabel.Location = new System.Drawing.Point(12, 150);
+            this.newAddressLabel.Location = new System.Drawing.Point(9, 117);
             this.newAddressLabel.Name = "newAddressLabel";
             this.newAddressLabel.Size = new System.Drawing.Size(70, 13);
             this.newAddressLabel.TabIndex = 4;
@@ -90,30 +72,10 @@
             // 
             // newAddressTextBox
             // 
-            this.newAddressTextBox.Location = new System.Drawing.Point(12, 166);
+            this.newAddressTextBox.Location = new System.Drawing.Point(12, 133);
             this.newAddressTextBox.Name = "newAddressTextBox";
             this.newAddressTextBox.Size = new System.Drawing.Size(154, 20);
             this.newAddressTextBox.TabIndex = 5;
-            // 
-            // changeDirButton
-            // 
-            this.changeDirButton.Location = new System.Drawing.Point(12, 107);
-            this.changeDirButton.Name = "changeDirButton";
-            this.changeDirButton.Size = new System.Drawing.Size(75, 23);
-            this.changeDirButton.TabIndex = 6;
-            this.changeDirButton.Text = "Change";
-            this.changeDirButton.UseVisualStyleBackColor = true;
-            this.changeDirButton.Click += new System.EventHandler(this.changeDirButton_Click);
-            // 
-            // openDirButton
-            // 
-            this.openDirButton.Location = new System.Drawing.Point(93, 107);
-            this.openDirButton.Name = "openDirButton";
-            this.openDirButton.Size = new System.Drawing.Size(75, 23);
-            this.openDirButton.TabIndex = 7;
-            this.openDirButton.Text = "Open";
-            this.openDirButton.UseVisualStyleBackColor = true;
-            this.openDirButton.Click += new System.EventHandler(this.openDirButton_Click);
             // 
             // closeButton
             // 
@@ -128,26 +90,50 @@
             // multipleInstancesCheckBox
             // 
             this.multipleInstancesCheckBox.AutoSize = true;
-            this.multipleInstancesCheckBox.Location = new System.Drawing.Point(172, 169);
+            this.multipleInstancesCheckBox.Location = new System.Drawing.Point(172, 133);
             this.multipleInstancesCheckBox.Name = "multipleInstancesCheckBox";
             this.multipleInstancesCheckBox.Size = new System.Drawing.Size(111, 17);
-            this.multipleInstancesCheckBox.TabIndex = 9;
+            this.multipleInstancesCheckBox.TabIndex = 10;
             this.multipleInstancesCheckBox.Text = "Multiple Instances";
             this.multipleInstancesCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(299, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Game Directory";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // currentAddressTextBox
+            // 
+            this.currentAddressTextBox.Location = new System.Drawing.Point(12, 85);
+            this.currentAddressTextBox.Name = "currentAddressTextBox";
+            this.currentAddressTextBox.Size = new System.Drawing.Size(154, 20);
+            this.currentAddressTextBox.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Current Address";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 261);
+            this.Controls.Add(this.currentAddressTextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.multipleInstancesCheckBox);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.openDirButton);
-            this.Controls.Add(this.changeDirButton);
             this.Controls.Add(this.newAddressTextBox);
             this.Controls.Add(this.newAddressLabel);
-            this.Controls.Add(this.gameDirectoryLabel);
-            this.Controls.Add(this.gameDirectoryTextBox);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.titleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -167,14 +153,13 @@
 
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button applyButton;
-        private System.Windows.Forms.TextBox gameDirectoryTextBox;
-        private System.Windows.Forms.Label gameDirectoryLabel;
         private System.Windows.Forms.Label newAddressLabel;
         private System.Windows.Forms.TextBox newAddressTextBox;
-        private System.Windows.Forms.Button changeDirButton;
-        private System.Windows.Forms.Button openDirButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.CheckBox multipleInstancesCheckBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox currentAddressTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 

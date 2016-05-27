@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -28,42 +27,32 @@ namespace AddressChanger
                 configWriter.Write("[ClientGame]\r\n");
                 configWriter.Write("loginServerAddress=" + newAddress);
                 configWriter.Close();
+                getCurrentAddress();
             }
             else
                 MessageBox.Show("Please enter a valid SWG game directory.", "Invalid Directory");
         }
 
-        private void changeDirButton_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog swgDirBrowser = new FolderBrowserDialog();
-            swgDirBrowser.Description = "Please show us where your SWG game directory is.";
-            if (swgDirBrowser.ShowDialog() == DialogResult.OK)
-            {
-                if (File.Exists(swgDirBrowser.SelectedPath + @"\SwgClient_r.exe"))
-                {
-                    Properties.Settings.Default.swgDirectory = swgDirBrowser.SelectedPath;
-                    Properties.Settings.Default.Save();
-                    gameDirectoryTextBox.Text = Properties.Settings.Default.swgDirectory;
-                }
-                else
-                    MessageBox.Show("Invalid SWG NGE game directory.", "Invalid Directory");
-            }
-        }
-
-        private void openDirButton_Click(object sender, EventArgs e)
-        {
-            if (Directory.Exists(Properties.Settings.Default.swgDirectory))
-                Process.Start(Properties.Settings.Default.swgDirectory);
+            Dispose();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            gameDirectoryTextBox.Text = Properties.Settings.Default.swgDirectory;
+            getCurrentAddress();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void getCurrentAddress()
         {
-            Dispose();
+            string currentAddress;
+            StreamReader userConfig = new StreamReader(Properties.Settings.Default.swgDirectory + @"\user.cfg");
+            while ((currentAddress = userConfig.ReadLine()) != null)
+            {
+                if (currentAddress.Contains("loginServerAddress"))
+                    currentAddressTextBox.Text = currentAddress.Replace("loginServerAddress=", "");
+            }
+            userConfig.Close();
         }
     }
 }
