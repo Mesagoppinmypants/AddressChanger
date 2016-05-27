@@ -45,14 +45,17 @@ namespace AddressChanger
 
         private void getCurrentAddress()
         {
-            string currentAddress;
-            StreamReader userConfig = new StreamReader(Properties.Settings.Default.swgDirectory + @"\user.cfg");
-            while ((currentAddress = userConfig.ReadLine()) != null)
+            if (File.Exists(Properties.Settings.Default.swgDirectory + @"\user.cfg"))
             {
-                if (currentAddress.Contains("loginServerAddress"))
-                    currentAddressTextBox.Text = currentAddress.Replace("loginServerAddress=", "");
+                string currentAddress;
+                StreamReader userConfig = new StreamReader(Properties.Settings.Default.swgDirectory + @"\user.cfg");
+                while ((currentAddress = userConfig.ReadLine()) != null)
+                {
+                    if (currentAddress.Contains("loginServerAddress"))
+                        currentAddressTextBox.Text = currentAddress.Replace("loginServerAddress=", "");
+                }
+                userConfig.Close();
             }
-            userConfig.Close();
         }
     }
 }
