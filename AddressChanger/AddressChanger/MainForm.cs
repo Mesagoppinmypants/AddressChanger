@@ -40,6 +40,7 @@ namespace AddressChanger
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            versionLabel.Text = "v" + Application.ProductVersion;
             if (!Directory.Exists(Properties.Settings.Default.swgDirectory))
             {
                 string dialog = null;
